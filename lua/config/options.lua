@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false -- Disable animated Ctrl-F & Ctrl-B
+vim.g.autoformat = false
 
 local opt = vim.opt
 
