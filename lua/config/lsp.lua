@@ -19,7 +19,7 @@ if not lsp_configs.yamake then
       filetypes = { "yamake" },
       -- for each root dir different instance of ya-make-lsp will be spawned
       -- we only need one, so arcadia root it is.
-      root_dir = require("lspconfig.util").root_pattern(".arcadia.root"),
+      -- root_dir = require("lspconfig.util").root_pattern(".arcadia.root"),
     },
   }
 end

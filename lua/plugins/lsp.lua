@@ -1,5 +1,12 @@
 return {
   {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      automatic_installation = false,
+      ensure_installed = { "pyright" },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason.nvim",
@@ -17,6 +24,7 @@ return {
               vim.lsp.buf.hover()
             end, opts)
           end,
+          root_markers = {"ya.make", "Makefile"},
           settings = {
             python = {
               analysis = {
@@ -25,10 +33,13 @@ return {
                 autoSearchPaths = true,
                 typeCheckingMode = "basic",
                 logLevel = "Warning",
-                extraPaths = { "~/arcadia/" },
+                extraPaths = { "~/arcadia"},
               },
             },
           },
+        },
+        ruff = {
+          autostart = false,
         },
       },
     },
